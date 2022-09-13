@@ -25,6 +25,7 @@ app.route('/api/contacts/:id')
     .put(contactController.update)
     .delete(contactController.delete);
 
+// Handle 404 response.
 app.use((req, res, next) => {
     // Handler for unknown route.
     // Call next() to pass to the error handling middleware.
